@@ -1,0 +1,271 @@
+支持特性一览：
+
+1 L2 interface配置
+1.1 配置模式：access
+1.2 配置模式：trunk
+1.3 配置模式：hybrid
+1.4 配置模式：dot1q
+1.5 配置trunk vlan
+1.6 配置pvid vlan
+1.7 配置default vlan
+1.8 配置tagged vlan
+1.9 配置新增
+1.10 配置删除
+1.11 配置恢复初始状态
+
+2 L3 interface配置
+2.1 配置主接口
+2.2 配置子接口
+2.3 配置ipv4
+2.4 配置ipv6
+2.5 配置新增
+2.6 配置删除
+2.7 配置恢复初始状态
+
+3 interface配置
+3.1 配置接口up状态
+3.2 配置接口down状态
+3.3 配置接口L2状态
+3.4 配置接口L3状态
+3.5 新增逻辑接口
+3.6 删除逻辑接口
+
+4 lacp
+4.1 配置lacp role
+4.2 配置priority
+4.3 配置mac address
+4.4 配置rate
+4.5 新增配置
+4.6 删除配置
+
+5 vlan
+5.1 配置vlan name
+5.2 配置vlan描述
+5.3 新增vlan
+5.4 新增vlan range
+5.5 删除vlan
+5.6 删除vlan range
+
+6 agg_int
+6.1 配置聚合端口模式
+6.2 配置聚合端口成员端口
+6.3 配置聚合端口hash mode
+6.4 新增聚合端口
+6.5 删除聚合端口
+
+7 mlag&stack
+7.1 配置mlag
+7.2 配置堆叠
+7.3 新增配置
+7.4 删除配置
+
+8 mtu
+8.1 配置接口mtu
+8.2 配置接口jumbo max min
+8.3 新增配置
+8.4 删除配置
+
+9 stp&vtp
+9.1 配置stp相关信息：bpdu filter、bpdu protection、edge port、root protection、loop protection、stp mode、tc interval、tc protction等信息
+9.2 新增配置
+9.3 删除配置
+
+10 vrrp&hsrp
+10.1 1.配置vrrp、hsrp 相关配置vrid、vip、vrrp type、priority、recover delay、 preempt、track interface、认证等信息
+10.5 新增配置
+10.6 删除配置
+
+11 bfd
+"11.1 配置bfd 相关配置：
+bfd_enable
+damp_init_wait_time
+damp_max_wait_time
+delay_up_time
+tos_exp_dynamic
+tos_exp_static
+本端、远端ip、本端、远端接口、bfd类型等"
+11.2 新增配置
+11.3 删除配置
+
+12 udld
+"12.1 配置udld 相关配置：
+认证、接口、timeout、模式"
+12.2 新增配置
+12.3 删除配置
+
+13 lldp
+"13.1 配置lldp相关配置：
+    interval、hold_multiplie、transmit_delay、接口"
+13.2 新增配置
+13.3 删除配置
+
+14 aaa
+"14.1 配置aaa相关配置：
+accounting_mode
+authen_scheme_name
+acct_scheme_name
+author_scheme_name
+domain_name
+first_authen_mode
+first_author_mode
+hwtacas_template
+local_user_group
+radius_server_group
+local_user_name
+local_user_level
+local_user_group
+local_service_type
+local_password
+local_ftp_dir
+hwtacacs_template
+hwtacacs_server_host_name
+hwtacacs_server_ip"
+14.2 新增配置
+14.3 删除配置
+
+15 acl
+15.1 配置basic、advance acl配置
+15.2 应用acl到接口
+15.2 新增配置
+15.4 删除配置
+
+16 pim&igmp
+16.1 新增组播、igmp 全局、接口相关配置
+16.2 配置pim模式、igmp版本、igmp snooping
+16.3 新增配置
+16.4 删除配置
+
+17 static  route
+17.1 配置v4静态路由
+17.2 配置v6静态路由
+17.3 新增配置
+17.4 删除配置
+
+18 ospf
+18.1 配置ospf进程、区域id、区域类型、routerid、lsa相关配置、bandwidth等
+18.2 配置接口下cost ,authentication-mode,network-type,area
+18.3 新增配置
+18.4 删除配置
+
+19 bgp
+"19.1 配置bgp相关配置：
+routerid、ad、neighbor、af、支持v4、v6 evpn af、timer、neighbor shutdown/up、always_compare_med、allow_invalid_as、auto_frr_enable、default_local_pref、policy_vpn_target、route_sel_delay等信息"
+19.2 新增配置
+19.3 删除配置
+
+20 vxlan
+"20.1 配置vxlan相关配置：
+L2  BD相关配置
+L2、3隧道相关配置
+L2 BD VNI
+L3 VNI
+nvo 相关配置"
+20.2 新增配置
+20.3 删除配置
+
+21 EVPN
+"21.1 配置bd rd、rt
+bgp evpn相关配置"
+21.2 新增配置
+21.3 删除配置
+
+22 syslog
+"22.1 配置syslog相关配置：
+facility、level、timestamp、server ip、source ip、server port、vrf、channel id、channel name、log level"
+22.2 新增配置
+22.3 删除配置
+
+23 snmp
+"23.1 1.配置snmp相关信息：
+是否使能acl、community_mib_view、community_name、group_name、notify_view、read_view、security_level、write_view、snmp 版本、auth_protocol、priv_protocol、user_group、usm_user_name、security_model、security_level、vpnname、server address"
+23.2 新增配置
+23.3 删除配置
+
+24 sflow
+24.1 配置sflow相关配置（collectorID,ipv4 or ipv6 address,vpn-instance,description,UDP port,datagrammax size, collector's paramater,aging time）
+24.2 新增配置
+24.3 删除配置
+
+25 netstream
+25.1 配置netstream相关配置(全局使能，接口使能和aggregation、export、rate、timeout、maxenter、vxlan_udp、sampler netstream mode、接口下inbound,outbound配置)
+25.2 新增配置
+25.3 删除配置
+
+26 telemetry
+26.1 配置telemetry相关配置(stream使能，时间戳，device-id,flow group aging time,flow trace collector,agent ip,source ip,接口下collector,sampling-rate)
+26.2 新增配置
+26.3 删除配置
+
+27 ntp
+27.1 配置 ntp server、peer、source interface、key id、preferred
+27.2 新增配置
+27.3 删除配置
+
+28 netconf
+"28.1 支持rpc get
+edit-config
+execute-action
+execute-cli"
+28.2 支持cfg xml
+
+29 config
+29.1 支持配置备份
+29.2 支持命令行逐条下发
+29.3 支持定义配置视图
+29.4 支持覆盖配置下发
+29.5 支持指定配置文件配置下发
+29.6 下发配置支持简写和严格匹配
+29.7 支持插入下发
+
+30 reboot
+30.1 支持设备保存重启
+30.2 支持指定时间重启
+
+31 rollback
+31.1 支持指定配置文件进行rollback
+31.2 支持设置rollback回滚点
+31.3 支持显示回滚点间的diff信息
+31.4 支持清除指定回滚点
+
+32 startup
+32.1 支持显示配置文件内容
+32.2 支持指定下次重启使用的配置文件
+32.3 支持指定下次重启使用的镜像和patch
+33  facts
+33.1 支持通过facts获取全部设备硬件信息、配置信息
+
+34 file copy
+34.1 支持ftp方式上传文件到设备指定目录
+34.2 支持scp方式下载设备上指定文件
+34.3 设备镜像通过ftp、scp上传到交换机指定目录
+34.4 检查文件是否上传成功
+34.5 设置启动镜像，保存配置文件
+
+35 设备补丁升级，并激活
+35.1 设备补丁通过ftp、scp上传到交换机指定目录
+35.2 检查文件是否上传成功
+35.3 保存文件并激活补丁
+35.4 检查激活结果
+
+36 设备license更新
+36.1 可以支持license文件通过ftp、scp上传到指定设备目录
+36.2 可以激活license文件
+36.3 验证激活结果
+
+37 可以自动收集厂家需要的诊断信息，并下载
+37.1 可以自动收集设备诊断所需的日志信息比如diag、log等
+37.2 可以按日期重命名文件
+37.3 可以下载到指定ftp、scp文件服务器
+
+38 配置下发
+38.1 配置下发前创建还原点
+38.2 可以通过lines或者文件的方式进行批量配置下发，配置视图可以用户自定义，（支持覆盖下发）
+38.3 遇到配置下发失败情况立即回滚到下发前创建的还原点
+39 配置对比：
+39.1 可以自定义配置selection，输入预期的配置，和设备取回的配置进行对比
+
+40. ISIS相关配置
+40.1 全局is-level，cost-style，preference，network-entity配置
+40.2 接口下Isis使能，circuit-level，circuit-type，cost，silent配置
+40.3 新增配置
+40.4 删除配置
