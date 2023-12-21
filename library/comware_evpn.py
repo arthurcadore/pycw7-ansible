@@ -266,8 +266,12 @@ def main():
                   descr='Error opening connection to device.')
 
     if module.params.get('mask'):
-        if int(mask)>32:
-            safe_fail(module,msg='IPv4 address mask length is out of range')
+        if sessaf == 'ipv4':
+            if int(mask) > 32:
+                safe_fail(module, msg='IPv4 address mask length is out of range')
+        elif sessaf == 'ipv6':
+            if int(mask) > 128:
+                safe_fail(module, msg='IPv6 address mask length is out of range')
 
     if module.params.get('name'):
         name = module.params.get('name')
