@@ -1,0 +1,19 @@
+---
+
+  - name: Comware facts
+    hosts: test1
+    gather_facts: no
+    connection: local
+
+    vars:
+      username: test
+      password: test123
+
+    tasks:
+
+      - name: get lldp neighbors
+        comware_neighbors: username={{ username }} password={{ password }} hostname={{ inventory_hostname }}
+        register: response
+
+      - name: dump all of results
+        debug: var=response.neighbors
