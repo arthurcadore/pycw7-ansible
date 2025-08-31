@@ -1,6 +1,6 @@
 # Python Comware7 Ansible Library
 
-Python library for integrating **Ansible** with the **CW7** system, enabling automation of inventory and device orchestration.  
+Python library for integrating **Ansible** with the **Comware7** embedded system, enabling automation of inventory and device orchestration.  
 
 ## Installation
 
