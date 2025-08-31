@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+recursive-include src/pycw7_ansible/utils/templates *.tmpl
+recursive-include src/pycw7_ansible/ansible/library *.py
+recursive-include src/pycw7_ansible/for-ncclient/ncclient *.py
+recursive-include src/pycw7_ansible/features *.py
+recursive-include src/pycw7_ansible/utils *.py
+recursive-include src/pycw7_ansible/ansible *.py

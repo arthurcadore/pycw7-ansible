@@ -1,0 +1,50 @@
+[build-system]
+requires = ["build", "setuptools>=61.0.0", "wheel", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycw7-ansible"
+version = "0.0.13"
+description = "Python package to simplify working with Comware7 Based devices"
+readme = "README.md"
+authors = [
+    { name = "arthurcadore", email = "arthurbarcella.ifsc@gmail.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+dependencies = [
+    "textfsm==1.1.0",
+    "lxml",
+    "ncclient",
+    "scp",
+    "ipaddr>=2.1.11",
+    "paramiko"
+]
+
+[project.urls]
+Homepage = "https://github.com/arthurcadore/pycw7-ansible"
+Repository = "https://github.com/arthurcadore/pycw7-ansible"
+"Bug Tracker" = "https://github.com/arthurcadore/pycw7-ansible/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = [
+    "pycw7_ansible",
+    "pycw7_ansible.features",
+    "pycw7_ansible.ansible",
+    "pycw7_ansible.utils",
+    "pycw7_ansible.for-ncclient"
+]
+include-package-data = true
+
+[tool.setuptools.package-data]
+pycw7_ansible = [
+    "utils/templates/textfsm_temps/*.tmpl",
+    "ansible/library/*.py",
+    "for-ncclient/ncclient/*.py"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py37"]
+include = "\\.pyi?$"
