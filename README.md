@@ -9,6 +9,7 @@ Python library for integrating **Ansible** with the **Comware7** embedded system
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### Install the package
